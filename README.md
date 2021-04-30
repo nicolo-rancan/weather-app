@@ -2,4 +2,5 @@
 
 ##### A weather application developed using OpenWeatherMap's api
 
-[OpenWeatherMap](https://openweathermap.org/)
+[WeatherApp](https://weather.nicolorancan.com)
+[OpenWeatherMap](https://openweathermap.org)
