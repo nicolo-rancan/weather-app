@@ -1,0 +1,214 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section {
+  width: 90%;
+  margin: 1em auto;
+  /* reset input */
+}
+
+body section #city-res {
+  font-size: 1rem;
+  padding: 7px 20px 7px 0.75em;
+  font-weight: bold;
+  margin-top: 2em;
+  display: inline-block;
+}
+
+body section .form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 25%;
+}
+
+body section .form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #333;
+  padding: 7px 0;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+body section .form__field::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body section .form__field:-ms-input-placeholder {
+  color: transparent;
+}
+
+body section .form__field::-ms-input-placeholder {
+  color: transparent;
+}
+
+body section .form__field::placeholder {
+  color: transparent;
+}
+
+body section .form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+body section .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+body section .form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+body section .form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+body section .form__field:required, body section .form__field:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body section button {
+  padding: 7px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #9b9b9b;
+  color: #9b9b9b;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 2em;
+}
+
+body section button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #11998e;
+  border: 2px solid #11998e;
+}
+
+body section h1 {
+  margin: auto;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5em auto auto auto;
+  height: auto;
+  width: 90%;
+  overflow-x: auto;
+  scrollbar-color: black rgba(0, 0, 0, 0.25);
+  scrollbar-width: thin;
+}
+
+body main .w-card {
+  width: auto;
+  margin: 3em 1em 1em 1em;
+  padding: 0.25em 1.75em 0.75em 1.75em;
+  background-color: whitesmoke;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+body main .w-card img {
+  margin: 1em auto 1em auto;
+  background-color: #e6e6e6;
+  border-radius: 999px;
+}
+
+body main .w-card h2 {
+  color: #333;
+  margin: 0.25em auto 0.25em 0;
+  text-align: left;
+}
+
+body main .w-card p {
+  color: #333;
+  margin: 0 0 0.25em 0;
+  text-align: left;
+}
+
+body main .w-card .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(5%, -90%);
+          transform: translate(5%, -90%);
+  width: auto;
+  height: 35px;
+  border-radius: 5px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .w-card .circle p {
+  color: #333;
+}
+
+body main .w-card .date {
+  margin: auto;
+  color: white;
+  font-weight: bold;
+}
+/*# sourceMappingURL=home.css.map */

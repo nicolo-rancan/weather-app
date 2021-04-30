@@ -1,0 +1,183 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #333;
+$gray: #9b9b9b;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  flex-direction: column;
+
+  section {
+    width: 90%;
+    margin: 1em auto;
+
+    #city-res {
+      font-size: 1rem;
+      padding: 7px 20px 7px 0.75em;
+      font-weight: bold;
+      margin-top: 2em;
+      display: inline-block;
+    }
+
+    .form__group {
+      position: relative;
+      padding: 15px 0 0;
+      margin-top: 10px;
+      width: 25%;
+    }
+
+    .form__field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid $gray;
+      outline: 0;
+      font-size: 1.3rem;
+      color: $white;
+      padding: 7px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:placeholder-shown ~ .form__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+      }
+    }
+
+    .form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: $gray;
+    }
+
+    .form__field:focus {
+      ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary;
+        font-weight: 700;
+      }
+      padding-bottom: 6px;
+      font-weight: 700;
+      border-width: 3px;
+      border-image: linear-gradient(to right, $primary, $secondary);
+      border-image-slice: 1;
+    }
+    /* reset input */
+    .form__field {
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+    }
+
+    button {
+      padding: 7px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: transparent;
+      border: 2px solid $gray;
+      color: $gray;
+      transition: 0.2s;
+      margin-top: 2em;
+
+      &:hover {
+        transition: 0.2s;
+        color: $primary;
+        border: 2px solid $primary;
+      }
+    }
+
+    h1 {
+      margin: auto;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+
+  main {
+    display: flex;
+    margin: 5em auto auto auto;
+    height: auto;
+    width: 90%;
+    overflow-x: auto;
+    scrollbar-color: black rgba(0, 0, 0, 0.25);
+    scrollbar-width: thin;
+
+    .w-card {
+      width: auto;
+      margin: 3em 1em 1em 1em;
+      padding: 0.25em 1.75em 0.75em 1.75em;
+      background-color: whitesmoke;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      img {
+        margin: 1em auto 1em auto;
+        background-color: rgb(230, 230, 230);
+        border-radius: 999px;
+      }
+
+      h2 {
+        color: #333;
+        margin: 0.25em auto 0.25em 0;
+        text-align: left;
+      }
+
+      p {
+        color: #333;
+        margin: 0 0 0.25em 0;
+        text-align: left;
+      }
+
+      .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        //box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.15);
+        transform: translate(5%, -90%);
+        width: auto;
+        height: 35px;
+        border-radius: 5px;
+        //rgb(40, 186, 253)
+        background-color: transparent;
+        display: flex;
+        p {
+          color: #333;
+        }
+      }
+
+      .date {
+        margin: auto;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
