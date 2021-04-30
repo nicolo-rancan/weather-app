@@ -12,7 +12,9 @@ async function getLocation() {
   let userCity = userLocation.city;*/
 
   if (userCity != "") {
-    let weather = await (await fetch(`https://localhost:5002/api/weather?city=${userCity}`)).json();
+    let weather = await (
+      await fetch(`https://weather.nicolorancan.com/api/weather?city=${userCity}`)
+    ).json();
 
     document.getElementById("city-res").innerText = `${
       weather.city.country
