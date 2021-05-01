@@ -27,7 +27,7 @@ async function getLocation() {
       card.className = "w-card";
 
       let cover = document.createElement("img");
-      cover.src = `http://openweathermap.org/img/wn/${weather.list[i].weather[0].icon}@2x.png`;
+      cover.src = `https://openweathermap.org/img/wn/${weather.list[i].weather[0].icon}@2x.png`;
 
       let title = document.createElement("h2");
       title.innerText = weather.list[i].weather[0].main;
