@@ -1,6 +1,8 @@
 let userCity = "";
 
 async function changeCity() {
+  while (document.getElementById("carosel").childElementCount > 0)
+    document.getElementById("carosel").firstChild.remove();
   userCity = document.getElementById("name").value;
   getLocation();
 }
